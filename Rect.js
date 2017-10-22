@@ -1,25 +1,25 @@
 function Rect(n, color) {
     createjs.Shape.call(this);
     this.setRectType = function(type) {
-        this._RectType = type;
+        this.RectType = type;
         switch (type) {
             case 1:
-                this.setColor(color);
+                this.setColor("#f44242");
                 break;
             case 2:
-                this.setColor("#ff0");
+                this.setColor("#4d41f4");
                 break;
         }
     }
-    this.setColor = function(colorstr) {
-        this.graphics.beginFill(colorstr);
-        this.graphics.drawRect(0, 0, 500 / n - 5, 500 / n - 5);
-        this.graphics.endFill;
+    this.setColor = function(colorString) {
+        this.graphics.beginFill(colorString);
+        this.graphics.drawRect(0, 0, 500 / n - 3, 500 / n - 3);
+        this.graphics.endFill();
     }
-    this.setRectType = function(){
-        return this._RectType;
+    this.getRectType = function(){
+        return this.RectType;
     }
-    this.setRectType(1);
+    this.getRectType(1);
 }
 
 Rect.prototype = new createjs.Shape();
