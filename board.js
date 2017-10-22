@@ -6,8 +6,8 @@ stage.addChild(gameboard);
 
 
 
+var n = 2;
 function addRect() {
-    var n = 2;
     var x = parseInt(Math.random() * n);
     var y = parseInt(Math.random() * n);
     for (var i = 0; i < n; i++) {
@@ -25,7 +25,7 @@ function addRect() {
             if (r.getRectType() == 2) {
                 r.addEventListener("click", function() {
                     if (n < 7) {
-                        n++;
+                        ++n;
                     }
                     gameboard.removeAllChildren();
                     addRect();

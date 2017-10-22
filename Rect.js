@@ -19,7 +19,7 @@ function Rect(n, color) {
     this.getRectType = function(){
         return this.RectType;
     }
-    this.getRectType(1);
+    this.setRectType(1);
 }
 
 Rect.prototype = new createjs.Shape();
