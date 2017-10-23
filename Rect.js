@@ -1,13 +1,13 @@
-function Rect(n, color) {
+function Rect(n, color,rect_color) {
     createjs.Shape.call(this);
     this.setRectType = function(type) {
         this.RectType = type;
         switch (type) {
             case 1:
-                this.setColor("#f44242");
+                this.setColor(color);
                 break;
             case 2:
-                this.setColor("#4d41f4");
+                this.setColor(rect_color);
                 break;
         }
     }
